@@ -2,7 +2,7 @@
 
 ---
 
-## Module 0
+## Module 0: Basic RAG Implementation
 
 [arnavv06-langsmith-MAT496/notebooks/module_0 at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/tree/main/notebooks/module_0)
 
@@ -12,7 +12,7 @@ Cloned a github repository and implemented a basic RAG application by running it
 
 [arnavv06-langsmith-MAT496/notebooks/module_0/rag_application.ipynb at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/blob/main/notebooks/module_0/rag_application.ipynb)
 
-Changes made:
+*Changes made:*
 
 * Used **groq** model provider since i'm familiar with it in class.
 * Used a free and fast **llama-3.1-8b-instant** model
@@ -30,9 +30,11 @@ Changes made:
 
 ---
 
-## Module 1
+## Module 1: Visibility While Building with Tracing
 
 [arnavv06-langsmith-MAT496/notebooks/module_1 at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/tree/main/notebooks/module_1)
+
+Tracing helps in pinpointing issues and helps to track how each part of the LLM application contributes to output. It is used to debug unexpected outputs and performance bottlenecks and helps us to setup observability in LLM applications.
 
 ### Video1: Tracing basics
 
@@ -44,7 +46,7 @@ If a function with traceable decorator is called, a run tree is created. Detecti
 
 Important thing to know is background threading is used so there is no latency.
 
-Changes made:
+*Changes made:*
 
 * Implemented RAG application used in module 0
 * provided meta data
@@ -75,7 +77,7 @@ Types:
 
 **Parser:** Extracts structed data
 
-Changes Made:
+*Changes Made:*
 
 Added a retriver to go through a list of constellations.
 
@@ -85,7 +87,7 @@ Added a retriver to go through a list of constellations.
 
 Learned alternative tracing ways in Langsmith. Tracing is done by default after setting up our environment variables and leveraging langchain and langgraph.**@traceabel** decorator is the default way to set up tracing. Also learned about wrap_openai() which is for users who want to use OpenAi SDK directly and trace all openai calls.
 
-Changes made:
+*Changes made:*
 
 * Used **Open AI** model since wrap_openai() was not available within groq
 * Used model **gpt-4o-mini**
@@ -99,18 +101,40 @@ Learned how conversational threads track full iterations between users and the a
 
 The thread contains a series of linked traces where each trace is an invocation of the application. Linking traces requires passing special metadata keys where value is a unique identifier of thread. Key names used are: session id, thread id, conversation id.
 
-Changes:
+*Changes Made:*
 
 1. Implemented basic RAG application used in module 0 (used Open ai model instead of Groq)
 2. Added follow up quetions of my own to test the model's conversational threading by passing the same thread id to all questions.Observed activity on langchain portal
 
 ![1759603323838](image/README/1759603323838.png)
 
-
-
 ![1759603500948](image/README/1759603500948.png)
-
 
 ***Images show that all traces lead to one particular trace and full conversation history is visible.***
 
 ---
+
+## Module 2: Testing and Evaluation
+
+[arnavv06-langsmith-MAT496/notebooks/module_2 at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/tree/main/notebooks/module_2)
+
+Testing is very important in LLM applications because of their non-deterministic nature. As applications get more agentic with more branches of logic, it becomes harder to test varied scenarios.
+
+### Video 1: Datasets
+
+[arnavv06-langsmith-MAT496/notebooks/module_2/dataset_upload.ipynb at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/blob/main/notebooks/module_2/dataset_upload.ipynb)
+
+Learned that datasets are a list of examples, where each example contains an input and an optional output.
+
+Changes Made:
+
+Created my own database and populated it with star wars related examples
+
+![1759609519820](image/README/1759609519820.png)
+
+***populated dataset***
+
+### Video 2: Evaluator
+
+
+### Video 3: Experiment
