@@ -11,3 +11,7 @@ lxml
 scikit-learn
 pandas
 pyarrow
+groq
+sentence-transformers
+langchain-huggingface
+langchain-groq

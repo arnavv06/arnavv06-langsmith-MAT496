@@ -3,13 +3,15 @@ import tempfile
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders.sitemap import SitemapLoader
 from langchain_community.vectorstores import SKLearnVectorStore
-from langchain_openai import OpenAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings  # free alternative
 
 def get_vector_db_retriever():
     persist_path = os.path.join(tempfile.gettempdir(), "union.parquet")
-    embd = OpenAIEmbeddings()
 
-    # If vector store exists, then load it
+    # Use HuggingFace free embeddings instead of paid OpenAI
+    embd = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+
+    # If vector store exists, load it
     if os.path.exists(persist_path):
         vectorstore = SKLearnVectorStore(
             embedding=embd,
@@ -18,8 +20,11 @@ def get_vector_db_retriever():
         )
         return vectorstore.as_retriever(lambda_mult=0)
 
-    # Otherwise, index LangSmith documents and create new vector store
-    ls_docs_sitemap_loader = SitemapLoader(web_path="https://docs.smith.langchain.com/sitemap.xml", continue_on_failure=True)
+    # Otherwise, index LangSmith docs and create new vector store
+    ls_docs_sitemap_loader = SitemapLoader(
+        web_path="https://docs.smith.langchain.com/sitemap.xml",
+        continue_on_failure=True
+    )
     ls_docs = ls_docs_sitemap_loader.load()
 
     text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
