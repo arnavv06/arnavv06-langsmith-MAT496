@@ -143,3 +143,10 @@ Evaluators help us to measure metrics like accuracy so that we can know whether 
 * Evaluated my own star wars dataset by passing the question *who killed palapatine* from database as input and providing correct answer as run output. Semantic similarity evaluated as 10.
 
 ### Video 3: Experiment
+
+Learned that experiments can be defined as running application over a dataset, and evaluating performance with evaluators. Application is run against each example in the dataset, and for each example a new run output is created. Evalurators then evaluate each run example comparing them against ground truths.
+
+*Changes made:*
+
+* Made my own **dataset** based on Star Wars
+* Made **evaluators** to see how they **score** different responses based on several metrics
