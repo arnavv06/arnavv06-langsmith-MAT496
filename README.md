@@ -136,5 +136,10 @@ Created my own database and populated it with star wars related examples
 
 ### Video 2: Evaluator
 
+Evaluators help us to measure metrics like accuracy so that we can know whether the changes we made help in improving our model. Evaluators in Langsmith operate over an example from our dataset and run our application over that example to calculate metrics like accuracy and hallucination. Evaluator takes in both a run and an example as access to the input, the refernce output and output from run.
+
+*Changes made:*
+
+* Evaluated my own star wars dataset by passing the question *who killed palapatine* from database as input and providing correct answer as run output. Semantic similarity evaluated as 10.
 
 ### Video 3: Experiment
