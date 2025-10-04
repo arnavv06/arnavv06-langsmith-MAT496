@@ -32,7 +32,11 @@ Changes made:
 
 ## Module 1
 
+[arnavv06-langsmith-MAT496/notebooks/module_1 at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/tree/main/notebooks/module_1)
+
 ### Video1: Tracing basics
+
+[arnavv06-langsmith-MAT496/notebooks/module_1/tracing_basics.ipynb at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/blob/main/notebooks/module_1/tracing_basics.ipynb)
 
 Learned how to implement **@traceable** decorator from langsmith package.
 
@@ -40,7 +44,7 @@ If a function with traceable decorator is called, a run tree is created. Detecti
 
 Important thing to know is background threading is used so there is no latency.
 
-Changes:
+Changes made:
 
 * Implemented RAG application used in module 0
 * provided meta data
@@ -53,13 +57,15 @@ Changes:
 
 ### Video2:  Types of Runs
 
+[arnavv06-langsmith-MAT496/notebooks/module_1/types_of_runs.ipynb at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/blob/main/notebooks/module_1/types_of_runs.ipynb)
+
 Learned how to use different types of tracing in Langsmith and why tracing is better than logging because logging makes it more difficult to find the root cause.
 
 Types:
 
 **LLM:** invokes an LLM
 
-**Retriever:** Retrieve docs froom databases and other resources
+**Retriever:** Retrieve docs froom databases and owhather resources
 
 **Tool:** Executes actions with function calls
 
@@ -72,3 +78,15 @@ Types:
 Changes Made:
 
 Added a retriver to go through a list of constellations.
+
+### Video 3: Alternative Tracing Methods
+
+[arnavv06-langsmith-MAT496/notebooks/module_1/alternative_tracing_methods.ipynb at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/blob/main/notebooks/module_1/alternative_tracing_methods.ipynb)
+
+Learned alternative tracing ways in Langsmith. Tracing is done by default after setting up our environment variables and leveraging langchain and langgraph.**@traceabel** decorator is the default way to set up tracing. Also learned about wrap_openai() which is for users who want to use OpenAi SDK directly and trace all openai calls.
+
+Changes made:
+
+* Used **Open AI** model since wrap_openai() was not available within groq
+* Used model **gpt-4o-mini**
+* Implemented a chatbot using wrap_openai() and observed changes reflected on langsmith portal
