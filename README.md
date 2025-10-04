@@ -150,3 +150,9 @@ Learned that experiments can be defined as running application over a dataset, a
 
 * Made my own **dataset** based on Star Wars
 * Made **evaluators** to see how they **score** different responses based on several metrics
+
+### Video 4: Analyzing Experiment Results
+
+I learned that running evaluators on LLM experiments provides meaningful insights into overall application performance. Experiments help reveal general trends and patterns, while also allowing a deeper dive into specific runs to understand how different datasets, prompts, and model behaviors influence the results. This process makes it easier to identify strengths, weaknesses, and areas for optimization in LLM performance.
+
+---
