@@ -29,3 +29,25 @@ Changes made:
 * Created a retriever vector to go through Langsmith docs
 
 ---
+
+## Module 1
+
+### Tracing basics:
+
+Learned how to implement **@traceable** decorator from langsmith package.
+
+If a function with traceable decorator is called, a run tree is created. Detection of root run(run trace) or parent run is also done, if parent run is detected then new run is nested function call. If called function and parent function are traceable, then new run is inserted in parent run tree. Run tree are built this way.
+
+Important thing to know is background threading is used so there is no latency.
+
+
+Changes:
+
+* Implemented RAG application used in module 0
+* provided meta data
+
+![1759597117382](image/README/1759597117382.png)
+
+1. Retrieved 4 documents for user input which are helpful.
+2. Passed questions along with documents as input to model
+3. Called groq and received return response.
