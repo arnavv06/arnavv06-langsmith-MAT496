@@ -90,3 +90,27 @@ Changes made:
 * Used **Open AI** model since wrap_openai() was not available within groq
 * Used model **gpt-4o-mini**
 * Implemented a chatbot using wrap_openai() and observed changes reflected on langsmith portal
+
+### Video 4: Conversational Threads
+
+[arnavv06-langsmith-MAT496/notebooks/module_1/conversational_threads.ipynb at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/blob/main/notebooks/module_1/conversational_threads.ipynb)
+
+Learned how conversational threads track full iterations between users and the application. Chat history has important context for follow up questions asked, this is where conversational threads come in. They are useful to see all the traces tied to one conversation with application as oppsed to looking at individual traces.
+
+The thread contains a series of linked traces where each trace is an invocation of the application. Linking traces requires passing special metadata keys where value is a unique identifier of thread. Key names used are: session id, thread id, conversation id.
+
+Changes:
+
+1. Implemented basic RAG application used in module 0 (used Open ai model instead of Groq)
+2. Added follow up quetions of my own to test the model's conversational threading by passing the same thread id to all questions.Observed activity on langchain portal
+
+![1759603323838](image/README/1759603323838.png)
+
+
+
+![1759603500948](image/README/1759603500948.png)
+
+
+***Images show that all traces lead to one particular trace and full conversation history is visible.***
+
+---
