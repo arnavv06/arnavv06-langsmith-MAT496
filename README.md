@@ -175,7 +175,7 @@ Learned how to populate a dataset directly from code IDE  using **create_example
 
 *Changes made:*
 
-* Created my own datasetrelate to  **Marvel universe**
+* Created my own dataset related to  **Marvel universe**
 * Created my own **Star wars** dataset
 
 ### Video 2: Prompt Hub
@@ -217,3 +217,5 @@ Learned how to use **Prompt canvas**. Also learned how to use an LLM agent to ge
 No code to be changed. Added and played around with different prompts in Langsmith UI.
 
 ![1760379254700](image/README/1760379254700.png)
+
+---
