@@ -206,4 +206,14 @@ Learnings:
 
 *Changes made:*
 
-Created a **dataset** named "Astronomy basics" which contains questions related to common phenomnas that occur in out universe.
+Created a **dataset** named "Astronomy basics" which contains questions related to common phenomenas that occur in our universe.
+
+### Video 4: Prompt Canvas
+
+Learned how to use **Prompt canvas**. Also learned how to use an LLM agent to generate a template and improve the prompt.
+
+*Changes made:*
+
+No code to be changed. Added and played around with different prompts in Langsmith UI.
+
+![1760379254700](image/README/1760379254700.png)
