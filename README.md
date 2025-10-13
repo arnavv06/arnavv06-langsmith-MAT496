@@ -160,3 +160,18 @@ Learned that experiments can be defined as **running application** over a datase
 I learned that running evaluators on LLM experiments provides meaningful insights into overall application performance. Experiments help **reveal general trends** and patterns and allowing a deeper dive into specific runs to understand how different prompts and model behaviors affect the results. This process makes it easier to identify **strengths**, **weaknesses**, and **areas for optimization** in LLM performance.
 
 ---
+
+## Module 3: Prompt Engineering
+
+### Video 1: Playground
+
+Played around **Langchain Playground**.I learned how to use create_dataset() which is used to create a new collection/dataset.
+
+Learned how to populate a dataset from code IDE using **create_examples()**.
+
+*Changes made:*
+
+* Created my own dataset relate to  Marvel universe
+* Created my own Star wars dataset
+
+### Video 2: Prompt Hub
