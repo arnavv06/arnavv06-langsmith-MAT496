@@ -197,6 +197,8 @@ Learnings:
 
 ### Video 3: Prompt Engineering Lifecycle
 
+[arnavv06-langsmith-MAT496/notebooks/module_3/prompt_engineering_lifecycle.ipynb at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/blob/main/notebooks/module_3/prompt_engineering_lifecycle.ipynb)
+
 Learnings:
 
 * Implementation of RAG using Langsmith Tracing
