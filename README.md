@@ -175,3 +175,18 @@ Learned how to populate a dataset from code IDE using **create_examples()**.
 * Created my own Star wars dataset
 
 ### Video 2: Prompt Hub
+
+Learnings:
+
+* Learned to create prompt templates from prompt hub in Langsmith UI.
+* hub.pull(): pull prompt templates we've made in prompt hub.
+* .invoke(): fill in the templates.
+* convert_prompt_to_openai_format(): convert messages to a format accepted by openai
+* push_prompt(): directly upload prompt from code
+
+*Changes made:*
+
+* Created my own prompt template in prompt hub with a single variable "topic". The LLM shares knowledge on the topic like Master Yoda from star wars would and talks in Yoda's speech style only.
+* Implemented the same from code only and didnt use the Langsmith UI
+
+### Video 3: Prompt Engineering Lifecycle
