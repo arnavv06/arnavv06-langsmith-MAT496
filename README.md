@@ -163,30 +163,47 @@ I learned that running evaluators on LLM experiments provides meaningful insight
 
 ## Module 3: Prompt Engineering
 
+[arnavv06-langsmith-MAT496/notebooks/module_3 at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/tree/main/notebooks/module_3)
+
 ### Video 1: Playground
 
-Played around **Langchain Playground**.I learned how to use create_dataset() which is used to create a new collection/dataset.
+[arnavv06-langsmith-MAT496/notebooks/module_3/playground_experiments.ipynb at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/blob/main/notebooks/module_3/playground_experiments.ipynb)
 
-Learned how to populate a dataset from code IDE using **create_examples()**.
+Played around **Langchain Playground**.I learned how to use **create_dataset()** which is used to create a new collection/dataset.
+
+Learned how to populate a dataset directly from code IDE  using **create_examples()**.
 
 *Changes made:*
 
-* Created my own dataset relate to  Marvel universe
-* Created my own Star wars dataset
+* Created my own datasetrelate to  **Marvel universe**
+* Created my own **Star wars** dataset
 
 ### Video 2: Prompt Hub
 
+[arnavv06-langsmith-MAT496/notebooks/module_3/prompt_hub.ipynb at main · arnavv06/arnavv06-langsmith-MAT496](https://github.com/arnavv06/arnavv06-langsmith-MAT496/blob/main/notebooks/module_3/prompt_hub.ipynb)
+
 Learnings:
 
-* Learned to create prompt templates from prompt hub in Langsmith UI.
-* hub.pull(): pull prompt templates we've made in prompt hub.
-* .invoke(): fill in the templates.
-* convert_prompt_to_openai_format(): convert messages to a format accepted by openai
-* push_prompt(): directly upload prompt from code
+* Learned to create prompt templates from P**rompt hub** in Langsmith UI.
+* **hub.pull():** pull prompt templates we've made in prompt hub.
+* **.invoke():** fill in the templates.
+* **convert_prompt_to_openai_format():** convert messages to a format accepted by openai
+* **push_prompt():** directly upload prompt from code
 
 *Changes made:*
 
-* Created my own prompt template in prompt hub with a single variable "topic". The LLM shares knowledge on the topic like Master Yoda from star wars would and talks in Yoda's speech style only.
+* Created my own **prompt template** in prompt hub with a single variable "topic". The LLM shares knowledge on the topic like Master Yoda from star wars would and talks in Yoda's speech style only.
 * Implemented the same from code only and didnt use the Langsmith UI
 
 ### Video 3: Prompt Engineering Lifecycle
+
+Learnings:
+
+* Implementation of RAG using Langsmith Tracing
+* Building vector stores
+* Building datasets
+* Prompt engineering
+
+*Changes made:*
+
+Created a **dataset** named "Astronomy basics" which contains questions related to common phenomnas that occur in out universe.
